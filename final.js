@@ -19,11 +19,11 @@ async function insertCommand(client, databaseAndCollection, application) {
 
 const app = express();
 
-app.set("views", path.resolve(__dirname, "templates"));
+app.set("views", path.resolve(__dirname, "build/templates"));
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static('css'))
+app.use(express.static('build/css'))
 
 let language_dictionary = {
     "C#" : 1,
