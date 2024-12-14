@@ -6,7 +6,7 @@ const bodyParser = require("body-parser"); /* To handle post parameters */
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 require("dotenv").config({ path: path.resolve(__dirname, './.env') })
-const portNumber = 5000;
+const portNumber = process.env.PORT || 3001;
 
 const uri = `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.sn6bc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 const databaseAndCollection = { db: process.env.MONGO_DB_NAME, collection: process.env.MONGO_COLLECTION };
