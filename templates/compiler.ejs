@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Online Code Compiler</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<h1>Online Code Compiler</h1>
+<div id='content'>
+    <div id='user-input-side'>
+        <form id='form' action='/compiler' method='post'>
+            <label>Input Your Code Here: </label>
+            <br>
+            <textarea id='input' name='code'></textarea>
+            <br>
+            <div id='controls'>
+                <select name='language'>
+                    <option value="C#">C#</option>
+                    <option value="F#">F#</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="C (gcc)">C (gcc)</option>
+                    <option value="C++ (gcc)">C++ (gcc)</option>
+                    <option value="Php">Php</option>
+                    <option value="Haskell">Haskell</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Perl">Perl</option>
+                    <option value="Lua">Lua</option>
+                    <option value="Nasm">Nasm</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Go">Go</option>
+                    <option value="Scala">Scala</option>
+                    <option value="D">D</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Bash">Bash</option>
+                    <option value="Erlang">Erlang</option>
+                    <option value="Elixir">Elixir</option>
+                    <option value="Ocaml">Ocaml</option>
+                    <option value="Kotlin">Kotlin</option>
+                    <option value="Rust">Rust</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="ATS">ATS</option>
+                    <option value="Cobol">Cobol</option>
+                    <option value="Coffeescript">Coffeescript</option>
+                    <option value="Crystal">Crystal</option>
+                    <option value="Elm">Elm</option>
+                    <option value="Groovy">Groovy</option>
+                    <option value="Idris">Idris</option>
+                    <option value="Julia">Julia</option>
+                    <option value="Mercury">Mercury</option>
+                    <option value="Nim">Nim</option>
+                    <option value="Nix">Nix</option>
+                    <option value="Raku">Raku</option>
+                    <option value="TypeScript">TypeScript</option>
+                </select>
+                <input type='submit'>
+            </div>
+        </form>
+    </div>
+    <div id='output-side'>
+        <label>Output: </label>
+        <br>
+        <textarea name='output' id='output' readonly >
+            <%- output %>
+        </textarea>
+    </div>
+</div>
+<hr>
+<a href='/history/'>HISTORY</a>
+<body>
+</html>
